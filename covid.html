@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/covid.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munro College | Covid Tracker</title>
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="burger-container">
+            <div class="burger">
+                <div class="burger__line-1"></div>
+                <div class="burger__line-1"></div>
+                <div class="burger__line-1"></div>
+            </div>
+        </div>
+        <div class="heading1">
+          <img src="img/mclogo.png" alt="munro college logo">
+        <h1>Munro College</h1>
+        </div>
+          
+      <div class="clear-fix"></div>
+        <ul id="nav-container">
+        <li class="lists active" id="home"><a href="index.html">Home</a></li>
+        <li class="lists inactive" id="news"><a>News</a>
+            <div class="sub sub-menu1">
+                <ul>
+                    <li><a href="#">Covid-19 Tracker</a></li>
+                    <li><a href="newsfeed.html">Newsfeed</a></li>
+                </ul>
+            </div>
+        </li>
+        <li id="academics" class="lists active" ><a target="_blank">Academics</a>
+            <div class="sub sub-menu2">
+                <ul>
+                    <li><a href="https://logins2.renweb.com/Logins/ParentsWeb-Login.aspx?">Renweb Login</a></li>
+                    <li><a>Worksheets</a></li>
+                    <li><a>Lessons</a></li>
+                    <li><a>Students</a></li>
+                </ul>
+            </div>
+            </li>
+        <li class="lists active" id="activities"><a href="quiz.html">Activities</a>
+        <div class="sub sub-menu2">
+            <ul>
+                <li><a href="sports.html">Sports</a></li>
+                <li><a href="quiz.html">Quiz Team</a></li>
+            </ul>
+        </div>
+        </li>
+        <li class="lists active" id="about"><a class="drop-down">About MC</a>
+            <div class="sub sub-menu3">
+                <ul>
+                    <li><a href="history.html">Brief History</a></li>
+                    <li><a href="vision-mission.html">Vision And Mission</a></li>
+                    <li><a>Core Values</a></li>
+                </ul>
+            </div></li>
+        </ul>
+       </nav>    
+        </header>
+        <main>
+    <span class="covid-heading">Covid Tracker</span>
+  <div class="container">
+      <span class="abs">Updates every 15 minutes</span>
+      <div class="stats-section">
+        <div class="stats-heading">
+
+            <h2><img src="img/jam-flag.jpg" class="jam-flag"><span> Jamaica Overview</span></h2>
+          </div>
+      <div class="stats">
+          <div class="cases">
+            <span>Confirmed</span>
+              <span class="cases__amount"></span>
+          </div>
+<div class="recovered">
+    <span>Recovered</span>
+    <span class="recovered__amount"></span>
+</div>
+<div class="deaths">
+    <span>Deaths</span>
+    <span class="deaths__amount"></span>
+</div>
+      </div>
+    </div>
+    <span class="abs">We get information from the best sources. Please note that these are not definite values but are proper estimates that can serve as a guideline. </span>
+  </div>
+  </main>
+  <footer>
+    <section class="footer-section">
+        <div class="logo-container-btm">
+            <img src="img/mclogo.png" alt="munro college logo">
+        </div>
+        <div class="web-foot">
+            
+                <div class="about-sec">
+                    <span class="foot-heads">About Links</span>
+                    <ul class="nav-btm">
+                    <li><a class="drop-down">About MC</a></li>
+                    <li><a href="history.html">Brief History</a></li>
+                    <li><a href="vision-mission.html">Vision And Mission</a></li>
+                    <li><a>Core Values</a></li>
+                    </ul>
+                </div>
+                   <div class="quick-sec">
+                    <span class="foot-heads">Quick Links</span>
+                    <ul class="nav-btm">
+                        <li><a href="covid.html">Covid-19 Tracker</a></li>
+                         <li><a href="newsfeed.html">Newsfeed</a></li>
+                         <li><a href="https://logins2.renweb.com/Logins/ParentsWeb-Login.aspx?">Renweb Login</a></li>
+                         <li><a>Lessons</a></li>
+                        </ul>
+                   </div>
+                    <div class="more-sec">
+                        <span class="foot-heads">More Links</span>
+                        <ul class="nav-btm">
+                        <li><a>Students</a></li>
+                        <li><a href="quiz.html">Quiz Team</a></li>
+                        <li><a href="sports.html">Sports</a></li>
+                        <li><a href="vision-mission.html">Vision And Mission</a></li>
+                        </ul>
+                        </div>
+              </div>  
+              <div class="copyright-sec">
+                <span>&copy Copyright 2020 Munro College</span>
+                <span>Created by Winston Brown</span>
+              </div>
+        </section>
+    </footer>
+    <script src="js/covid.js"></script>
+    <script src="js/navbar.js"></script>
+    </body>
+</body>
+</html>
