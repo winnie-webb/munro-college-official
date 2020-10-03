@@ -1,0 +1,57 @@
+@import "../abstracts/_functions";
+@import "../abstracts/_mixins";
+@import "../abstracts/_variables";
+@import "../base/animations";
+@import "../base/base";
+@import "../components/header";
+@import "../components/footer";
+@import "../base/typography";
+@import "../base/utilities";
+.quiz{
+    margin-top: 10rem;
+}
+.quiz__heading{
+font-size: 2rem;
+color:navy;
+font-weight: 500;
+display: block;
+text-align: center;
+margin-bottom: 2rem;
+}
+.quiz__images{
+    display: flex;
+    justify-content: space-evenly;
+
+& img{
+    width: 30rem;
+    flex:1;
+    margin:0 2rem;
+&:last-child{
+    animation:fadeInLeft 1.5s 1;
+    margin-left:0;
+}
+}
+}
+.content1{
+    color:rgb(66, 66, 66);
+    font-weight: 400;
+    line-height: 2rem;
+    margin-top:4rem;
+    margin-left: 4rem;
+    margin-bottom: 4rem;
+}
+@media (max-width:1000px){
+    .quiz__images{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & img{
+            margin:0 10%;
+            width:80%;
+            &:last-child{
+                margin-top: 2rem;
+                margin-left: 10%;
+            }
+        }
+    }
+}

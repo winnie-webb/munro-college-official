@@ -1,0 +1,56 @@
+@import "../abstracts/_functions";
+@import "../abstracts/_mixins";
+@import "../abstracts/_variables";
+@import "../base/animations";
+@import "../base/base";
+@import "../base/typography";
+@import "../base/utilities";
+@import "../components/header";
+@import "../components/footer.scss";
+@import "../components/preloader";
+.vision, .mission{
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    min-height:30rem;
+    width:90%;
+    margin:0 5%;
+    background-attachment: fixed;
+    margin-bottom: 1rem;
+}
+.vision{
+    margin-top:10rem;
+    background-image:
+    linear-gradient(to top,rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.8)),
+    url(../img/eye-vision.jpg);
+}
+.vision__heading, .mission__heading{
+    display: block;
+    text-align:center;
+    color:gold;
+    font-size: 3em;
+    margin-bottom: 2rem;
+    font-weight:500;
+    font-family: 'Dancing Script', cursive;
+}
+.vision-content,.mission-content{
+    line-height: 2rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color:rgb(219, 219, 219);
+    padding: 2rem;
+}
+
+.mission {
+    background-image:linear-gradient(to right bottom,rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.6)),
+     url(../img/rocket1.jpg);
+    filter:contrast(8px);
+}
+@media (max-width:550px){
+    .vision-content,.mission-content{
+        padding:0.5rem;
+        font-size:1rem;
+    }
+}

@@ -336,42 +336,32 @@ nav h1 {
     .copyright-sec span {
       padding: 0.5rem; } }
 
-.history {
-  margin-top: 11rem; }
+main {
+  margin-top: 10rem; }
 
-.history__heads {
-  font-size: 2.5rem;
-  text-align: center;
-  color: navy;
-  display: block;
-  font-weight: 500;
-  letter-spacing: 0.2rem;
-  margin-top: 2rem; }
-
-.history__content {
-  line-height: 1.5rem;
-  color: #363636;
+.container {
+  width: 70%;
+  margin: 0 15%;
   font-weight: 400;
-  margin-top: 3rem;
-  padding: 0 2rem; }
-
-.history__motto__content {
-  font-weight: 300;
-  margin-top: 1rem;
-  font-size: 1.5em;
-  padding: 2rem;
   text-align: center; }
+  .container__heading {
+    display: block;
+    font-size: 2rem;
+    color: gold;
+    text-align: left; }
 
-.verse {
-  font-size: 2rem;
-  color: gold; }
-
-@media (max-width: 430px) {
-  .history__heads {
-    font-size: 2rem; } }
-
-@media (max-width: 330px) {
-  .history__heads {
-    font-size: 1.5rem; }
-  .history__content {
-    padding: 1rem; } }
+.row {
+  display: flex;
+  border-bottom: 1px solid gold;
+  padding: 3rem; }
+  .row div {
+    color: navy;
+    flex: 1; }
+  .row__name {
+    font-size: 1.5rem;
+    cursor: pointer; }
+    .row__name i {
+      color: gold; }
+    .row__name span a {
+      color: navy;
+      margin-left: 0.4rem; }

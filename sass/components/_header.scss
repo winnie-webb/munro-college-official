@@ -1,0 +1,228 @@
+// nav bar
+$color-primary-gold :#f3cf10;
+$color-primary-navy :#06093A;
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 6rem;
+    z-index: 2;
+    background: #060838;
+    transition: height 300ms; 
+}
+.heading1 {
+    display: inline-block;
+    left: 10%; 
+    position: relative;
+    top: 20px; 
+  }
+    nav img {
+        width: 18%;
+        height: 18%; }
+      
+      
+      nav h1 {
+        display: inline-block;
+       position: relative;
+        color: $color-primary-gold;
+        font-weight: 500;
+        top:-15px;
+      }
+      
+      /*Styling the whole list (ul)*/
+      #nav-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: -2em;
+        margin-left: 17em; }
+      
+      .lists {
+        margin-left: 1em;
+        list-style-type: none; 
+        position: relative;
+      }
+      .inactive a {
+        padding: 0.3em;
+        text-decoration: none;
+        display: inline-block;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 400ms, color 1s;
+        margin-left: 0; 
+        &:hover{
+            background-color: gold;
+          color:#fff;
+          } 
+    }
+      
+      .inactive > li{
+        background-color: gold;
+      }
+      
+      .active a {
+        padding: 0.3em;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        color: gold;
+        &:hover {
+            background-color: gold;
+            padding: 0.3em;
+            transition: background-color 400ms, color 1s;
+            color: #00004d; 
+          }
+     }
+      
+      
+      
+      .sub {
+        position: absolute;
+        padding: 1rem;
+        text-decoration: none;
+        background-color: $color-primary-navy;
+        cursor: pointer; 
+        width:13rem;
+        text-align: center;
+        display: none;
+        transform: translateX(-80px) translateY(0.5rem);
+          & li{
+            margin-bottom: 1rem;
+            border-bottom: 1px solid gold;
+            & a{
+                color: gold;
+                transition: color 400ms;
+                display: block;
+                width:100%;
+                &:hover{
+                    color:#fff;
+                    }
+              }
+          }
+          
+      }
+      
+      
+      #news:hover .sub,
+      #activities:hover .sub,
+      #about:hover .sub,
+      #academics:hover .sub
+      {
+      display: block;
+        animation:submenu-fade 500ms;
+      }
+    .burger-container{
+      display: none;
+    }
+  
+  
+    @media (max-width:1170px){
+      header{
+        position: relative;
+      }
+      .heading1{
+        left:20%;
+      }
+      .burger div{
+        width:35px;
+        height:2px;
+        background-color:$color-primary-gold;
+        margin-top:8px;
+      }
+#nav-container{
+  position: absolute;
+flex-direction: column;
+width: 100%;
+z-index:10000;
+top:120px;
+right: 50%;
+justify-content: flex-start;
+margin:auto;
+background-color:$color-primary-navy;
+text-align:left;
+transform: translate(50%);
+padding:3rem;
+opacity: 0;
+transition: transform 800ms , opacity 800ms;
+font-size:1.8rem;
+z-index: 2;
+height:0;
+display: none;
+// width: 100%;
+}
+.sub {
+  position: static;
+  padding: 1rem;
+  text-decoration: none;
+  background-color: transparent;
+  width: 100%;
+  cursor: pointer; 
+  width:auto;
+  border:none;
+  display: block;
+  transform: translateX(0);
+  text-align: inherit;
+  margin-left:1rem;
+  & li{
+    margin-bottom: 1rem;
+    border: none;
+    & a{
+        color: gold;
+        transition: color 400ms;
+        border-bottom: 1px solid rgba(255, 217, 0, 0.301);
+
+        display: block;
+        width: 100%;
+        &:hover{
+            color:#fff;
+            }
+      }
+  }
+}
+#news:hover .sub,
+#activities:hover .sub,
+#about:hover .sub,
+#academics:hover .sub
+{
+  animation:none;
+}
+}
+.lists{
+  padding:0.5rem 0;
+  display: block;
+}
+.burger-container{
+position: absolute;
+display: block;
+left:5%;
+top: 40px;
+& .burger div{
+  display: block;
+}
+}
+.burger{
+  display: block;
+  cursor: pointer;
+}
+@media (max-width:380px){
+  .heading1{
+    left:20%;
+  }
+  .heading1 h1{
+    font-size: 1rem;
+  }
+  .lists{
+    font-size: 1rem;
+  }
+
+}
+@media (max-width:550px){
+  #nav-container{
+    font-size: 1.1rem;
+  }
+  .lists{
+    margin-left:-10%;
+  }
+}

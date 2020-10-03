@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munro College | Worksheets</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/mcachieve-sport.css">
-    <title>Munro College | Sports</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/worksheets.css">
 </head>
 <body>
     <div class='spinner-wrapper'>
@@ -31,7 +30,7 @@
                     </ul>
                 </div>
             </li>
-            <li id="academics" class="lists active" ><a target="_blank">Academics</a>
+            <li id="academics" class="lists inactive" ><a target="_blank">Academics</a>
                 <div class="sub sub-menu2">
                     <ul>
                         <li><a href="https://logins2.renweb.com/Logins/ParentsWeb-Login.aspx?">Renweb Login</a></li>
@@ -41,7 +40,7 @@
                     </ul>
                 </div>
                 </li>
-            <li class="lists inactive" id="activities"><a href="quiz.html">Activities</a>
+            <li class="lists active" id="activities"><a href="quiz.html">Activities</a>
             <div class="sub sub-menu2">
                 <ul>
                     <li><a href="sports.html">Sports</a></li>
@@ -69,51 +68,48 @@
            </nav>    
             </header>
             <main>
-            <section class="sports sports-ath">
-                <span class="sports-heading sports-ath-heading">MC Athletics</span>
-                <p class="sports-ath-content">
-                    <b>"Bobo"</b> We are well-known for being competetive in almost every track and field event.
-                    We have produced great athletes who went out and did what we
-                    Munronians know how to do best <b>"Win".</b>
-                    
-                </p>
-                <div class="mcteam-container">
-                    <img class="teams-img" src="img/mcath-team.jpg">
-                </div>
-            </section>
-            <section class="sports sports-football">
-                <span class="sports-heading sports-ath-football">MC  Football</span>
-                <p class="sports-ath-content">
-                    <b>"Bobo"</b> Having over 7 titles in daCosta Cup (much more to come) and over 15 Olivier Shield titles.... We have made it known that MC is a force
-                    to be reckoned with in the football arena. Unfortunately this season will not have any progression because of the pandemic.
-                </p>
-
-                <div class="mcteam-container">
-                    <img class="teams-img" src="img/mcfootball-team.jpg">
-                </div>
-            </section>
+                <section class="files-section">
+                    <div class="container">
+                        <span class="container__heading">Files > Form 3</span>
+                        <div class="row">
+                            <div class="row__heading row__heading1">
+                                <span>Name</span>
+                            </div>
+                            <div class="row__heading row__heading2">
+                                <span>Last Updated</span>
+                            </div>
+                            <div class="row__heading row__heading3">
+                                <span>Views</span>
+                            </div>
+                        </div>
+                        <h2 style="margin-top:2rem;">There are no files available until school resumes.</h2>
+                        <!-- <div class="row">
+                            <div class="row__name">
+                                <span><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                    <a href="worksheets-form5.html">Form 5</a></span>                            </div>
+                            <div class="row__last-updated">
+                                <span>Sep 30, 2020</span>
+                            </div>
+                            <div class="row__amount">
+                                <span>8</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </section>
             </main>
             <footer></footer>
-            <script>
-                let spinnerWrapper = document.querySelector('.spinner-wrapper');
-           
-           window.addEventListener('load', function () {
-               spinnerWrapper.parentElement.removeChild(spinnerWrapper);
-           });
-           </script>  
-            <script src="js\navbar.js"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script src="js/navbar.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $("header").load("header.html");
         $("footer").load("footer.html");
         </script>
-<script>
-     window.addEventListener("load",()=>{
-                const mainLink = document.getElementById("activities")
+        <script>
+            window.addEventListener("load",()=>{
+                const mainLink = document.getElementById("academics");
                 mainLink.classList.remove("active");
-                mainLink.classList.add("inactive");
-                if(mainLink === null)location.reload()
-        });
-</script>
+                mainLink.classList.add("inactive")
+            })
+        </script>
 </body>
 </html>

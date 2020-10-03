@@ -34,9 +34,6 @@ covidBtn.style.animation = "none";
     
 }
 
-window.addEventListener("load",()=>{
-h1.style.animation = "backInLeft 1s 1";
-});
 
 
 

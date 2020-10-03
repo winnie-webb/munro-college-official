@@ -1,0 +1,46 @@
+@import "../abstracts/_functions";
+@import "../abstracts/_mixins";
+@import "../abstracts/_variables";
+@import "../base/animations";
+@import "../base/base";
+@import "../components/header";
+@import "../components/footer";
+@import "../base/typography";
+@import "../base/utilities";
+
+main{
+margin-top:10rem;
+}
+.container{
+    width:70%;
+    margin:0 15%;
+    font-weight: 400;
+    text-align: center;
+    &__heading{
+        display: block;
+        font-size:2rem;
+        color: gold;
+        text-align: left;
+    }
+}
+.row{
+    display: flex;
+    border-bottom: 1px solid gold;
+    padding: 3rem;
+
+    & div{
+        color:navy;
+        flex: 1;
+    }
+    &__name{
+        font-size:1.5rem;
+        cursor: pointer;
+        & i{
+            color:gold;
+        }
+        & span a{
+            color: navy;
+            margin-left: 0.4rem;
+        }
+    }
+}

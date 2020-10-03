@@ -1,0 +1,73 @@
+@import "../abstracts/_functions";
+@import "../abstracts/_mixins";
+@import "../abstracts/_variables";
+@import "../base/animations";
+@import "../base/base";
+@import "../components/header";
+@import "../components/footer";
+@import "../base/typography";
+@import "../base/utilities";
+body{
+background:linear-gradient(#0f0c29,#302b63,#2C5364);
+color:#fff;
+font-weight: 300;
+}
+.covid-news__content__heading{
+  font-size: 4rem;
+  letter-spacing: 0.3rem;
+  color:gold;
+  margin-top:8rem;
+  margin-bottom: 4rem;
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  }
+
+.princi-message img{
+  @include princi-desktop;
+}
+
+.princi-message p{
+ line-height: 2rem;
+ margin-left: 1rem;
+ transform:translateY(1rem);
+ font-weight: 400;
+}
+.section-newsfeed{
+  margin-top:10rem;
+  min-height:20rem;
+font-weight:400
+}
+.news-headline{
+  display: block;
+  margin:2rem 0;
+  padding:0 2rem;
+  text-transform: uppercase;
+}
+.informer{
+  display: block;
+  font-size:1.5rem;
+  text-align:center;
+}
+.readmore{
+  display:inline-block;
+  color:gold;
+margin-left:4rem;
+margin-top:2rem;
+margin-bottom: 2rem;  
+}
+@media (max-width:1070px){
+  .princi-message img{
+    @include princi-mobile;
+  }
+}
+@media (max-width:750px){
+  .covid-news__content__heading{
+    font-size:3rem;
+  }
+}
+@media (max-width:600px){
+  .covid-news__content__heading{
+    font-size:2rem;
+  }
+}

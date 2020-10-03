@@ -58,7 +58,7 @@
     transform: translateX(-80px) translateY(50%);
     opacity: 0; }
   to {
-    transform: translateX(-80px) translateY(0);
+    transform: translateX(-80px) translateY(0.5rem);
     opacity: 1; } }
 
 * {
@@ -72,7 +72,8 @@ html {
   font-family: 'Lato','Arial',sans-serif;
   font-weight: 300;
   font-size: 20px;
-  list-style: none; }
+  list-style: none;
+  width: 100vw; }
 
 img {
   max-width: 100%;
@@ -171,9 +172,8 @@ nav h1 {
   cursor: pointer;
   width: 13rem;
   text-align: center;
-  border: 1px solid gold;
   display: none;
-  transform: translateX(-80px); }
+  transform: translateX(-80px) translateY(0.5rem); }
   .sub li {
     margin-bottom: 1rem;
     border-bottom: 1px solid gold; }
@@ -369,7 +369,8 @@ nav h1 {
 @media (max-width: 1000px) {
   .quiz__images {
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
     .quiz__images img {
       margin: 0 10%;
       width: 80%; }

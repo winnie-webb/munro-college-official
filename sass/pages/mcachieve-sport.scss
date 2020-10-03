@@ -1,0 +1,38 @@
+@import "../abstracts/_functions";
+@import "../abstracts/_mixins";
+@import "../abstracts/_variables";
+@import "../base/animations";
+@import "../base/base";
+@import "../components/header";
+@import "../components/footer";
+@import "../base/typography";
+@import "../base/utilities";
+
+.sports-ath{
+    margin-top: 12rem;
+    margin-bottom: 5rem;
+}
+
+.sports-heading{
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color:navy;
+}
+.sports-ath-content{
+    margin-top: 6vh;
+    color:rgb(78, 78, 78);
+    line-height: 2rem;
+    letter-spacing:0.1rem;
+    font-weight: 400;
+    padding:0 2rem;
+}
+.mcteam-container{
+text-align: center;
+}
+.teams-img{
+width:35rem;
+height:25rem;
+margin-top: 2rem;
+}

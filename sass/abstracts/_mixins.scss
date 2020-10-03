@@ -1,0 +1,19 @@
+@mixin princi-desktop{
+    border-radius: 50%;
+  width:15rem;
+  float:left;
+  height:15rem;
+  shape-outside: circle(50% at 50% 50%);
+  margin-left: 1rem;
+  padding: 1rem;
+}
+@mixin princi-mobile{
+    border-radius: 0%;
+    width:60%;
+    margin:0 15%;
+    float:none;
+    display: block;
+    height:15rem;
+    shape-outside: none;
+    padding:0;
+}
