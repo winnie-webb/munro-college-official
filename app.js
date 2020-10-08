@@ -5,13 +5,11 @@ const app = express();
 app.set("view engine","ejs")
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname))
-
-const arrayOfPages = ["covid.ejs","history.ejs","login.ejs","newsfeed.ejs","quiz.ejs","sports.ejs","core-values.ejs","vision-mission.ejs","worksheets.ejs","worksheets-form1.ejs","worksheets-form2.ejs","worksheets-form3.ejs","worksheets-form4.ejs","worksheets-form5.ejs"];
-arrayOfPages.forEach(page=>app.get(`/${page}/`,(req,res)=>res.render(page)));
-
 app.get("/",(req,res)=>{
     res.render("index");
 });
+const arrayOfPages = ["covid.ejs","history.ejs","login.ejs","newsfeed.ejs","quiz.ejs","sports.ejs","core-values.ejs","vision-mission.ejs","worksheets.ejs","worksheets-form1.ejs","worksheets-form2.ejs","worksheets-form3.ejs","worksheets-form4.ejs","worksheets-form5.ejs"];
+arrayOfPages.forEach(page=>app.get(`/${page}/`,(req,res)=>res.render(page)));
 
 app.post("/videos",(req,res)=>{
     const name = req.body.name;
