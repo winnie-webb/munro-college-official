@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/mcabout-history.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munro College | History</title>
+</head>
+<body>
+    <div class='spinner-wrapper'>
+        <div class="spinner"></div>
+    </div>
+    <%- include ("header") -%>
+            <main>
+        <section class="history">
+            <div class="history__content__container">
+                <span class="history__heads history__heading">A Brief History</span>
+                <p class="history__content">
+                    On the 30th, October, 1834, and Act for the sale of the real estate of Robert Huge Munro and Caleb Dickenson was read and passed on November 6. By this Act, the Trustees were given power of sale of the real estate and slaves of Robert Hugh Munro and Caleb Dickenson for investing the funds and applying the same to the purposes of their wills and for no other purpose.
+The Trustees were appointed to select a convenient and healthy site or sites within the former limits of St. Elizabeth for erection of a school or several schools for poor boys and a school or several schools for poor girls and for an Alms House.
+In 1856, a Free School for boys was opened near Black River and early in 1857, the premises of Potsdam in Santa Cruz Mountains were purchased and the school removed there.
+The girl's school was first opened at Mount Zion in 1874 and on the 1st January 1885, was removed to Malvern House and then to Hampton.
+                    </p>
+                    <div class="history__motto">
+                        <span class="history__heads">Our Motto</span>
+                        <span class="verse history__heads">Matthew 5:14</span>
+                        <p class="history__motto__content">
+                        <b style="color:gold;">In arce sitam quis occultabit — A city set upon a hill cannot be hid.</b>
+                        </p>
+                    </div>
+                    <div class="history__alumni">
+                        <span class="history__heads">The Alumni</span>
+                            <p class="history__content history__alumni__content">
+                                Alumni include many prominent figures in Jamaican society; one of its most notable is former Prime Minister Donald Sangster, others include Kenneth McNeill, Oraine Barrett, Morris Cargill, John Cyril Emerson Swaby and Douglas Manley, brother to former Prime Minister Michael Manley. Basil Waite, Former Opposition Spokesperson on Education is also a graduate of Munro College as is popular journalist Lindy Delapenha, The Honourable Burchell Whiteman, O.J., and Dr Derrick McKoy, lawyer and former Contractor-General. Judge Ira DeCordova Rowe. Current Minister of State of Education Floyd Green; Oje Ken Ollivierre, popularly known as Protoje, is a contemporary reggae singer and songwriter from Jamaica.
+                            </p>
+                    </div>
+
+            </div>
+        </section>
+    </main>
+    <%- include ("footer") -%>
+    
+    <script src="js\navbar.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+         <script>
+            window.addEventListener("load",()=>{
+                const mainLink = document.getElementById("about")
+                mainLink.classList.remove("active");
+                mainLink.classList.add("inactive");
+            })
+        </script>
+</body>
+</html>

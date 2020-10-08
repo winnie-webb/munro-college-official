@@ -44,3 +44,14 @@ margin-top:10rem;
         }
     }
 }
+@media (max-width:600px){
+    .row{
+        &__amount, &__last-updated{
+            display: none;
+        }
+       &__heading:not(:first-child){
+           display: none;
+       }
+        
+    }
+}

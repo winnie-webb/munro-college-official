@@ -336,74 +336,47 @@ nav h1 {
     .copyright-sec span {
       padding: 0.5rem; } }
 
-body {
-  background: linear-gradient(#0f0c29, #302b63, #2C5364);
-  color: #fff;
-  font-weight: 300; }
-
-.covid-news__content__heading {
-  font-size: 4rem;
-  letter-spacing: 0.3rem;
-  color: gold;
-  margin-top: 8rem;
-  margin-bottom: 4rem;
-  display: block;
+.wrapper {
+  margin-top: 10rem;
+  min-height: 50vh;
   text-align: center;
   font-weight: 400; }
+  .wrapper__main {
+    border: 1px solid #000;
+    width: 70%;
+    margin: 2rem auto; }
+    .wrapper__main form {
+      margin: 3rem 0; }
 
-.princi-message img {
-  border-radius: 50%;
-  width: 15rem;
-  float: left;
-  height: 15rem;
-  shape-outside: circle(50% at 50% 50%);
-  margin-left: 1rem;
-  padding: 1rem; }
+.wrapper__instructions__heading {
+  font-size: 2rem;
+  color: navy; }
 
-.princi-message p {
-  line-height: 2rem;
-  margin-left: 1rem;
-  transform: translateY(1rem);
-  font-weight: 400; }
+.wrapper__instructions__content {
+  margin: 2rem 0; }
 
-.section-newsfeed {
-  margin-top: 10rem;
-  min-height: 20rem;
-  font-weight: 400; }
+#file {
+  opacity: 0;
+  width: 10%; }
 
-.news-headline {
-  display: block;
-  margin: 2rem 0;
-  padding: 0 2rem;
-  text-transform: uppercase; }
+.updates {
+  margin: 2rem 0; }
+  .updates__content {
+    padding: 1rem;
+    display: inline-block; }
 
-.informer {
-  display: block;
-  font-size: 1.5rem;
-  text-align: center; }
+.wrapper__submit-btn {
+  padding: 0.6rem 1rem;
+  background-color: gold;
+  border: none;
+  cursor: pointer; }
 
-.readmore {
-  display: inline-block;
-  color: gold;
-  margin-left: 4rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem; }
+.video-uploader {
+  color: navy;
+  cursor: pointer; }
 
-@media (max-width: 1070px) {
-  .princi-message img {
-    border-radius: 0%;
-    width: 60%;
-    margin: 0 15%;
-    float: none;
-    display: block;
-    height: 15rem;
-    shape-outside: none;
-    padding: 0; } }
-
-@media (max-width: 750px) {
-  .covid-news__content__heading {
-    font-size: 3rem; } }
-
-@media (max-width: 600px) {
-  .covid-news__content__heading {
-    font-size: 2rem; } }
+.preview {
+  padding: 1rem;
+  border: 1px solid;
+  width: 50%;
+  margin: 2rem auto; }

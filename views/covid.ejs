@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/covid.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munro College | Covid Tracker</title>
+</head>
+<body>
+    <%- include ("header") %>
+        <main>
+    <span class="covid-heading">Covid Tracker</span>
+  <div class="container">
+      <span class="abs">Updates every 15 minutes</span>
+      <div class="stats-section">
+        <div class="stats-heading">
+
+            <h2><img src="img/jam-flag.jpg" class="jam-flag"><span> Jamaica Overview</span></h2>
+          </div>
+      <div class="stats">
+          <div class="cases">
+            <span>Confirmed</span>
+              <span class="cases__amount"></span>
+          </div>
+<div class="recovered">
+    <span>Recovered</span>
+    <span class="recovered__amount"></span>
+</div>
+<div class="deaths">
+    <span>Deaths</span>
+    <span class="deaths__amount"></span>
+</div>
+      </div>
+    </div>
+    <span class="abs">We get information from the best sources. Please note that these are not definite values but are proper estimates that can serve as a guideline. </span>
+  </div>
+  </main>
+    <canvas style="background-color: #f7f7f7;" id="myChart" width="400" height="100">
+          </canvas>
+  <%- include ("footer") %>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
+    <script type="module" src="js/covid.js"></script>
+    <script src="js/navbar.js"></script>
+        <script>
+          window.addEventListener("load",()=>{
+                const mainLink = document.getElementById("news");
+                mainLink.classList.remove("active");
+                mainLink.classList.add("inactive");
+          })
+        </script>
+    </body>
+</body>
+</html>

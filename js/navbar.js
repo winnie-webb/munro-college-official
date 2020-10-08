@@ -1,4 +1,9 @@
-function toggleMenuBar(burger,navbar){
+
+window.addEventListener("load",()=>{
+    let spinnerWrapper = document.querySelector('.spinner-wrapper');
+    spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+    const burger = document.querySelector(".burger");
+    const navbar = document.getElementById("nav-container");
     let clicks = 1;
     burger.onclick = ()=>{
         if(clicks === 1){
@@ -13,12 +18,5 @@ function toggleMenuBar(burger,navbar){
     clicks = 1;
         }
     }
-}
-window.addEventListener("load",()=>{
-    const burger = document.querySelector(".burger");
-    const navbar = document.querySelector("#nav-container");
-    if(burger && navbar !== null)toggleMenuBar(burger,navbar);
-    else {
-location.reload();
-    }
+
 });

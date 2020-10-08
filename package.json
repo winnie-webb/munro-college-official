@@ -11,7 +11,9 @@
     "compile:sass:quiz": "node-sass sass/pages/mcachieve-quiz.scss css/mcachieve-quiz.css -w",
     "compile:sass:sport": "node-sass sass/pages/mcachieve-sport.scss css/mcachieve-sport.css -w",
     "compile:sass:vision-mission": "node-sass sass/pages/mcabout-vision-mission.scss css/mcabout-vision-mission.css -w",
-    "compile-sass:worksheets": "node-sass sass/pages/worksheets.scss css/worksheets.css -w"
+    "compile:sass:worksheets": "node-sass sass/pages/worksheets.scss css/worksheets.css -w",
+    "compile:sass:dashboard": "node-sass sass/pages/dashboard.scss css/dashboard.css -w",
+    "start": "nodemon app.js"
   },
   "author": "Winston Brown",
   "license": "ISC",
@@ -20,6 +22,7 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
     "express": "^4.17.1"
   }
 }

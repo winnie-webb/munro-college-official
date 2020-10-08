@@ -1,0 +1,59 @@
+@import "../abstracts/_functions";
+@import "../abstracts/_mixins";
+@import "../abstracts/_variables";
+@import "../base/animations";
+@import "../base/base";
+@import "../components/header";
+@import "../components/footer";
+@import "../base/typography";
+@import "../base/utilities";
+.wrapper{
+    margin-top: 10rem;
+    min-height: 50vh;
+    text-align: center;
+    font-weight: 400;
+   &__main{
+    border:1px solid #000;
+    width:70%;
+    margin:2rem auto;
+    & form{
+        margin:3rem 0;
+    }
+   }
+}
+.wrapper__instructions{
+    &__heading{
+        font-size: 2rem;
+        color:navy;
+    }
+    &__content{
+        margin:2rem 0;
+    }
+}
+#file{
+    opacity: 0;
+    width: 10%;
+}
+.updates{
+    margin:2rem 0;
+    &__content{
+        padding: 1rem;
+        display: inline-block;
+    }
+}
+.wrapper__submit-btn{
+    padding: 0.6rem 1rem;
+    background-color: gold;
+    border:none;
+    cursor:pointer;
+}
+    .video-uploader{
+color:navy;
+cursor: pointer;
+    }
+.preview{
+    padding: 1rem;
+    border: 1px solid;
+    width: 50%;
+    margin:2rem auto;
+}

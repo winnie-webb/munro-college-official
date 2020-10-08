@@ -73,7 +73,7 @@ html {
   font-weight: 300;
   font-size: 20px;
   list-style: none;
-  width: 100vw; }
+  overflow-x: hidden; }
 
 img {
   max-width: 100%;
@@ -365,3 +365,9 @@ main {
     .row__name span a {
       color: navy;
       margin-left: 0.4rem; }
+
+@media (max-width: 600px) {
+  .row__amount, .row__last-updated {
+    display: none; }
+  .row__heading:not(:first-child) {
+    display: none; } }

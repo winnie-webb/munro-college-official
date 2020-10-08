@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mcachieve-sport.css">
+    <title>Munro College | Sports</title>
+</head>
+<body>
+    <div class='spinner-wrapper'>
+        <div class="spinner"></div>
+    </div>
+    <%- include ("header") -%>
+            <main>
+            <section class="sports sports-ath">
+                <span class="sports-heading sports-ath-heading">MC Athletics</span>
+                <p class="sports-ath-content">
+                    <b>"Bobo"</b> We are well-known for being competetive in almost every track and field event.
+                    We have produced great athletes who went out and did what we
+                    Munronians know how to do best <b>"Win".</b>
+                    
+                </p>
+                <div class="mcteam-container">
+                    <img class="teams-img" src="img/mcath-team.jpg">
+                </div>
+            </section>
+            <section class="sports sports-football">
+                <span class="sports-heading sports-ath-football">MC  Football</span>
+                <p class="sports-ath-content">
+                    <b>"Bobo"</b> Having over 7 titles in daCosta Cup (much more to come) and over 15 Olivier Shield titles.... We have made it known that MC is a force
+                    to be reckoned with in the football arena. Unfortunately this season will not have any progression because of the pandemic.
+                </p>
+
+                <div class="mcteam-container">
+                    <img class="teams-img" src="img/mcfootball-team.jpg">
+                </div>
+            </section>
+            </main>
+            <%- include ("footer") -%>
+            <script src="js\navbar.js"></script>
+<script>
+     window.addEventListener("load",()=>{
+                const mainLink = document.getElementById("activities")
+                mainLink.classList.remove("active");
+                mainLink.classList.add("inactive");
+        });
+</script>
+</body>
+</html>

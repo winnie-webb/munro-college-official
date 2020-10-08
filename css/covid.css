@@ -73,7 +73,7 @@ html {
   font-weight: 300;
   font-size: 20px;
   list-style: none;
-  width: 100vw; }
+  overflow-x: hidden; }
 
 img {
   max-width: 100%;
