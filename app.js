@@ -26,4 +26,4 @@ app.get('*',(req, res)=>{
     if(res.status(404))res.send(`<h1 style="text-align:center">Page Not Found</h1>`);
   });
 
-app.listen(3000,"127.0.0.1",()=>console.log("Server has started"));
+app.listen(process.env.PORT || 3000);
