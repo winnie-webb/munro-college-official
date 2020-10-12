@@ -33,6 +33,15 @@ font-weight: 300;
  transform:translateY(1rem);
  font-weight: 400;
 }
+.loader{
+  width:70px;
+  height: 70px;
+  border-radius: 50%;
+  margin:2rem auto;
+  border: 6px solid rgb(255, 230, 0);
+  border-top:6px solid navy;
+  animation: load 2s infinite;
+}
 .section-newsfeed{
   margin-top:10rem;
   min-height:20rem;

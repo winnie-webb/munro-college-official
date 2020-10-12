@@ -7,7 +7,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/mcnews.css">
-
 </head>
 <body class="body">
     <div class='spinner-wrapper'>
@@ -27,7 +26,7 @@
                 </p>
             </div>
             <h2 class="covid-news__content__heading">CoroNews</h2>
-            <span class="informer">Please Wait...</span>
+           <div class="loader"></div>
             </section>
             <section class="section-newsfeed">
             </section>
@@ -35,6 +34,10 @@
         <%- include ("footer") -%>
         <script src="js/navbar.js"></script>
         <script src="js/covid-cope.js"></script>
+        <script>
+            const loader = document.querySelector(".loader");
+        window.addEventListener("load",()=>loader.parentElement.removeChild())
+        </script>
           <script>
             window.addEventListener("load",()=>{
                   const mainLink = document.getElementById("news");

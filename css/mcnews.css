@@ -61,6 +61,12 @@
     transform: translateX(-80px) translateY(0.5rem);
     opacity: 1; } }
 
+@keyframes load {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
 * {
   margin: 0;
   padding: 0;
@@ -365,6 +371,15 @@ body {
   margin-left: 1rem;
   transform: translateY(1rem);
   font-weight: 400; }
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 2rem auto;
+  border: 6px solid #ffe600;
+  border-top: 6px solid navy;
+  animation: load 2s infinite; }
 
 .section-newsfeed {
   margin-top: 10rem;

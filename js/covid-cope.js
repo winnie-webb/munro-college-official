@@ -5,17 +5,17 @@ xhr.open("GET","https://cryptic-ravine-96718.herokuapp.com/",true);
 window.addEventListener("load",getNews);
 function getNews(){
 xhr.onload = ()=>{
+    const loader = document.querySelector(".loader");
     if(xhr.status >= 200 && xhr.status <= 308){
         const res = JSON.parse(xhr.responseText);
+        loader.style.display = "none";
         console.log(res);
-        document.querySelector(".informer").style.display = "none";
         for(let i = 0; i<(res.news.length - 80 );i++){
             const title = res.news[i].title;
             const link = res.news[i].link;
             createElements(title,link);
         }
-         
-    }else if(xhr.status > 310)  document.querySelector(".informer").innerText = "An error occured. Please reload and try again";
+    }
 }
 xhr.send();
 }
