@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 
+let vidContent = "No videos currently selected for upload";
+
 app.set("view engine","ejs")
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname))
@@ -15,10 +17,9 @@ app.post("/videos",(req,res)=>{
     const name = req.body.name;
     const code = req.body.code;
 code === "MC-STU" ? res.render("videos")
-:code === "MC-TCH" ? res.render("dashboard")
+:code === "MC-TCH" ? res.render("dashboard",{upl:vidContent})
 :res.send(`<a href="/login.ejs"> Code you entered is not valid. Please try again</a>`);
 });
-
 
 app.get('*',(req, res)=>{
     if(res.status(404))res.send(`<h1 style="text-align:center">Page Not Found</h1>`);

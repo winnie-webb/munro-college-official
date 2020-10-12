@@ -15,16 +15,19 @@
         <div class="wrapper">
             <div class="wrapper__instructions">
                 <span class="wrapper__instructions__heading">Overview</span>
-                <p class="wrapper__instructions__content">You can upload lessons for students by clicking the upload video button</p>
+                <p class="wrapper__instructions__content">You can upload lessons in video format for students:<br>
+                     1.Clicking the upload video button<br>
+                     2.Select the video you want to upload<br>
+                     3. Click the submit button</p>
             </div>
             <div class="wrapper__main">
-            <form action="/dashboard.ejs" method="GET">
+            <form id="dashboard-form">
                 <label class="video-uploader" for="file"><i class="fa fa-upload"></i> Upload Video</label>
             <input id="file" type="file" name="file" accept="video/*">
             <input class="wrapper__submit-btn" type="submit">
             </form>
             <div class="preview">
-                <p id="preview__content">No videos currently selected for upload</p>
+                <p class="preview__content"><%- upl %></p>
             </div>
         </div>
             <span class="wrapper__notice">The dashboard will soon be updated so that you can have more control.</span>
@@ -39,8 +42,31 @@
     </main>
     <%- include ("footer") %>
     <script src="js/navbar.js"></script>
-  
+  <script>
+      window.addEventListener("load",()=>{
+                const mainLink = document.getElementById("academics");
+                mainLink.classList.remove("active");
+                mainLink.classList.add("inactive");
+          })
+  </script>
+<script>
+    const previewContent = document.querySelector('.preview__content');
+    const file = document.getElementById("file");
+    file.onchange = ()=>{
+        const fileContent = file.files[0]
+previewContent.textContent = "Your video is ready to be submitted";
+    }
+    const form = document.getElementById('dashboard-form');
+    form.onsubmit = e=>{
+        const fileContent = file.files[0]
+        if(fileContent === undefined){
+            previewContent.textContent = "No video is ready";
+        }else{
+         previewContent.textContent = "File is being uploaded..."
+         setTimeout(()=>previewContent.textContent = "File has been uploaded !",5000)
+        }
+        e.preventDefault();
+    }
 </script>
-
 </body>
 </html>

@@ -7,18 +7,32 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/videos.css">
 <style>
     html{
         font-family: 'Lato',sans-serif;
+    }
+    h2{
+        margin:15rem;
         text-align: center;
+        font-size:2rem;
     }
 </style>
 </head>
 <body>
+    <%- include("header") %>
 <main>
     <div class="container">
-        <h1 class="heading">No videos available right now</h1>
+        <h2 class="heading">No videos available right now</h1>
     </div>
 </main>
+<%- include("footer") %>
+<script>
+    window.addEventListener("load",()=>{
+                const mainLink = document.getElementById("academics");
+                mainLink.classList.remove("active");
+                mainLink.classList.add("inactive");
+          })
+</script>
 </body>
 </html>
