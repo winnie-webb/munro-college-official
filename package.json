@@ -14,7 +14,8 @@
     "compile:sass:worksheets": "node-sass sass/pages/worksheets.scss css/worksheets.css -w",
     "compile:sass:dashboard": "node-sass sass/pages/dashboard.scss css/dashboard.css -w",
     "compile:sass:videos": "node-sass sass/pages/videos.scss css/videos.css",
-    "start":"node app.js"
+    "start":"node app.js",
+    "devStart" : "nodemon app.js"
   },
   "author": "Winston Brown",
   "license": "ISC",

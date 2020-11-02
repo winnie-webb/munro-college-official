@@ -32,12 +32,8 @@
             </section>
         </main> 
         <%- include ("footer") -%>
-        <script src="js/navbar.js"></script>
-        <script src="js/covid-cope.js"></script>
-        <script>
-            const loader = document.querySelector(".loader");
-        window.addEventListener("load",()=>loader.parentElement.removeChild())
-        </script>
+        <script defer src="js/navbar.js"></script>
+        <script defer src="js/covid-cope.js"></script>
           <script>
             window.addEventListener("load",()=>{
                   const mainLink = document.getElementById("news");

@@ -9,7 +9,6 @@ xhr.onload = ()=>{
     if(xhr.status >= 200 && xhr.status <= 308){
         const res = JSON.parse(xhr.responseText);
         loader.style.display = "none";
-        console.log(res);
         for(let i = 0; i<(res.news.length - 80 );i++){
             const title = res.news[i].title;
             const link = res.news[i].link;
@@ -32,8 +31,3 @@ function createElements(title,link){
     readmore.href = link;
     newsfeed.appendChild(readmore);
 }
-let spinnerWrapper = document.querySelector('.spinner-wrapper');
-      window.onload = ()=>{
-           spinnerWrapper.parentElement.removeChild(spinnerWrapper);
-           spinnerWrapper.style.display = "none";
-    }
