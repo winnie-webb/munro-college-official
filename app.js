@@ -53,7 +53,4 @@ app.listen(process.env.PORT || 3000);
 
 // Todo 
 
-// 1. Reformat css and images to match the current project layout 
-    // Status : "Done"
-// Implement proper login system
-// Status : "Not Completed"
+// 1. Fix heroku memory leaks problem 
