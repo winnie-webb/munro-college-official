@@ -1,3 +1,13 @@
+@import "../abstracts/_functions";
+@import "../abstracts/_mixins";
+@import "../abstracts/_variables";
+@import "../base/animations";
+@import "../base/base";
+@import "../components/header";
+@import "../components/footer";
+@import "../components/preloader";
+@import "../base/typography";
+@import "../base/utilities";
 
 .slider-carousel {
     width: 100%;
@@ -19,7 +29,7 @@
   
   #intro-body {
     transition: font-size 300ms;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.514),rgba(0, 0, 0, 0.514)), url(img/mcwebfirstimg1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.514),rgba(0, 0, 0, 0.514)), url(../img/mcwebfirstimg1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -82,7 +92,7 @@
 }
 
 .covid-header {
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/covid-1.jpg);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/covid-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

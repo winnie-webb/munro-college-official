@@ -4,18 +4,19 @@
   "description": "MC Landing Page",
   "main": "index.js",
   "scripts": {
-    "compile:sass:home": "node-sass sass/main.scss mchomeweb.css -w",
-    "compile:sass:covid": "node-sass sass/pages/covid.scss css/covid.css -w",
-    "compile:sass:history": "node-sass sass/pages/mcabout-history.scss css/mcabout-history.css -w",
-    "compile:sass:news": "node-sass sass/pages/mcnews.scss css/mcnews.css -w",
-    "compile:sass:quiz": "node-sass sass/pages/mcachieve-quiz.scss css/mcachieve-quiz.css -w",
-    "compile:sass:sport": "node-sass sass/pages/mcachieve-sport.scss css/mcachieve-sport.css -w",
-    "compile:sass:vision-mission": "node-sass sass/pages/mcabout-vision-mission.scss css/mcabout-vision-mission.css -w",
-    "compile:sass:worksheets": "node-sass sass/pages/worksheets.scss css/worksheets.css -w",
-    "compile:sass:dashboard": "node-sass sass/pages/dashboard.scss css/dashboard.css -w",
-    "compile:sass:videos": "node-sass sass/pages/videos.scss css/videos.css",
-    "start":"node app.js",
-    "devStart" : "nodemon app.js"
+    "compile:sass:home": "node-sass public/sass/main.scss public/css/mchomeweb.css -w",
+    "compile:sass:covid": "node-sass public/sass/pages/covid.scss public/css/covid.css -w",
+    "compile:sass:history": "node-sass public/sass/pages/mcabout-history.scss public/css/mcabout-history.css -w",
+    "compile:sass:news": "node-sass public/sass/pages/mcnews.scss public/css/mcnews.css -w",
+    "compile:sass:quiz": "node-sass public/sass/pages/mcachieve-quiz.scss public/css/mcachieve-quiz.css -w",
+    "compile:sass:sport": "node-sass public/sass/pages/mcachieve-sport.scss public/css/mcachieve-sport.css -w",
+    "compile:sass:vision-mission": "node-sass public/sass/pages/mcabout-vision-mission.scss public/css/mcabout-vision-mission.css -w",
+    "compile:sass:worksheets": "node-sass public/sass/pages/worksheets.scss public/css/worksheets.css -w",
+    "compile:sass:dashboard": "node-sass public/sass/pages/dashboard.scss public/css/dashboard.css -w",
+    "compile:sass:videos": "node-sass public/sass/pages/videos.scss public/css/videos.css -w",
+    "compile:sass:404": "node-sass public/sass/pages/404.scss public/css/404.css -w",
+    "start": "node src/app.js",
+    "devStart": "nodemon src/app.js"
   },
   "author": "Winston Brown",
   "license": "ISC",
@@ -24,7 +25,13 @@
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
+    "nanoid": "^3.1.18",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
   }
 }
