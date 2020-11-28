@@ -1,18 +1,19 @@
 function initSession (app,session) {
+  
+    const {
+        NODE__ENV,
+        SESSION__SECRET,
+        DATABASE__URI
+    } = process.env
     const MongoDBStore = require('connect-mongodb-session')(session);
  
     const store = new MongoDBStore({
-      uri: 'mongodb://127.0.0.1:27017/connect_mongodb_session_test',
+      uri:DATABASE__URI,
       collection: 'mySessions'
     }); 
     store.on('error', error => {
         console.log(error);
       });
-    const {
-        NODE__ENV,
-        SESSION__SECRET
-    } = process.env
-    
     const isInProduction = NODE__ENV === "production"
     
     app.use(session({
