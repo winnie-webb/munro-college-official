@@ -4,13 +4,18 @@ function redirectToDashboard(req,res,next){
     if (studentId) return res.redirect("/videos");
     next()
 }
-function redirectToLogin(req,res,next) {
+function ensureAuthForTeacher(req,res,next) {
+    const {teacherId} = req.session;
+    if (teacherId) return next() ;
+    res.redirect("/login");
+}
+function ensureAuthForStudent(req,res,next) {
     const {studentId,teacherId} = req.session;
-    if (teacherId) return res.render("dashboard");
-    if(studentId) return res.render("videos");
+    if (studentId  || teacherId) return next() ;
     res.redirect("/login");
 }
 module.exports = {
     redirectToDashboard : redirectToDashboard,
-    redirectToLogin : redirectToLogin
+    ensureAuthForTeacher : ensureAuthForTeacher,
+    ensureAuthForStudent : ensureAuthForStudent
 }

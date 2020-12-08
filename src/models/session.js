@@ -3,7 +3,8 @@ function initSession (app,session) {
     const {
         NODE__ENV,
         SESSION__SECRET,
-        DATABASE__URI
+        DATABASE__URI,
+        SESSION__NAME
     } = process.env
     const MongoDBStore = require('connect-mongodb-session')(session);
  
@@ -17,6 +18,7 @@ function initSession (app,session) {
     const isInProduction = NODE__ENV === "production"
     
     app.use(session({
+        name : SESSION__NAME,
         secret : SESSION__SECRET,
         cookie : {
             maxAge : 1000 * 60 * 60 * 2,

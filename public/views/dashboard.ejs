@@ -8,11 +8,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<<<<<<< HEAD
+=======
+<style>
+.wrapper__top{
+display:flex;
+justify-content: space-around;
+}
+.wrapper__top__logout-btn{
+    padding:0.7rem;
+    background-color: navy;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+.wrapper__top__user-name span {
+    color: navy;
+}
+</style>
+>>>>>>> d837fa6 (Fixed user roles for teachers and students)
 </head>
 <body>
     <%- include ("header") %>
     <main>
         <div class="wrapper">
+<<<<<<< HEAD
+=======
+            <div class="wrapper__top">
+            <div class="wrapper__top__user-name">
+                <span><%= username %></span>
+            </div>
+            <div class="wrapper__top__logout">
+                <form action="/logout" method="POST">
+                <button class="wrapper__top__logout-btn">Logout</button>
+                </form>
+            </div>
+        </div>
+>>>>>>> d837fa6 (Fixed user roles for teachers and students)
             <div class="wrapper__instructions">
                 <span class="wrapper__instructions__heading">Overview</span>
                 <p class="wrapper__instructions__content">You can upload lessons in video format for students:<br><br>
