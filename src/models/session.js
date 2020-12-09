@@ -15,7 +15,7 @@ function initSession (app,session) {
     store.on('error', error => {
         console.log(error);
       });
-    const isInProduction = NODE_ENV === "production"
+    const isInProduction = NODE__ENV === "production"
     
     app.use(session({
         name : SESSION__NAME,
