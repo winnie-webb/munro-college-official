@@ -30,7 +30,7 @@ app.get("/dashboard",redirectToLogin);
 
 app.get("/login",redirectToDashboard,(req,res) => res.render("login"));
 
-app.get("/core-values",(req,res) => res.redirect("/history"));
+app.get("/core-values",(req,res) => res.redirect("/"));
 
 app.post("/login",(req,res) => {
     const{code} = req.body;
