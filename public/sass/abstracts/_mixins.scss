@@ -17,3 +17,11 @@
     shape-outside: none;
     padding:0;
 }
+@mixin button_default{
+  color: #fff;
+  border: none;
+  outline: none;
+  padding:0.7rem;
+  cursor:pointer;
+  border-radius: 6px;
+}

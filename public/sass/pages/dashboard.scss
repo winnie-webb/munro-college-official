@@ -9,26 +9,19 @@
 @import "../base/utilities";
 .wrapper{
     margin-top: 10rem;
-    min-height: 50vh;
+    height: 50%;
     text-align: center;
     font-weight: 400;
    &__main{
-    border:1px solid #000;
-    width:70%;
+    width:50%;
     margin:2rem auto;
+    border-radius: 6px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.151);
+    padding:0.2rem;
     & form{
         margin:3rem 0;
     }
    }
-}
-.wrapper__instructions{
-    &__heading{
-        font-size: 2rem;
-        color:navy;
-    }
-    &__content{
-        margin:2rem 0;
-    }
 }
 #file{
     opacity: 0;
@@ -42,18 +35,49 @@
     }
 }
 .wrapper__submit-btn{
-    padding: 0.6rem 1rem;
     background-color: gold;
-    border:none;
-    cursor:pointer;
+    margin:0.7rem;
+    @include button_default;
 }
     .video-uploader{
-color:navy;
+color:gold;
 cursor: pointer;
     }
 .preview{
     padding: 1rem;
-    border: 1px solid;
     width: 60%;
     margin:2rem auto;
+    color:navy;
+}
+.wrapper__top{
+    display:flex;
+    justify-content: space-around;
+    
+    &__logout-btn{
+        background-color: navy;
+        @include button_default;
+    }
+    &__user-name span {
+        color: navy;
+    }
+}
+.errors{
+    color:red;
+    & p {
+        opacity: 0;
+    }
+}
+
+@media (max-width : 700px){
+    .wrapper__main{
+        width: 70%;
+        height: 30%;
+    }
+}
+@media (max-width : 410px){
+    .wrapper__main{
+        width: 80%;
+        padding: 0.2rem;
+        
+    }
 }

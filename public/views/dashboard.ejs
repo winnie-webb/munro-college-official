@@ -8,36 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<<<<<<< HEAD
-=======
-<style>
-.wrapper__top{
-display:flex;
-justify-content: space-around;
-}
-.wrapper__top__logout-btn{
-    padding:0.7rem;
-    background-color: navy;
-    color: #fff;
-    border: none;
-    outline: none;
-    border-radius: 3px;
-}
-.wrapper__top__user-name span {
-    color: navy;
-}
-</style>
->>>>>>> d837fa6 (Fixed user roles for teachers and students)
 </head>
 <body>
     <%- include ("header") %>
     <main>
         <div class="wrapper">
-<<<<<<< HEAD
-=======
+
+            <div class="wrapper__tutorial">
+
+            </div>
             <div class="wrapper__top">
             <div class="wrapper__top__user-name">
-                <span><%= username %></span>
+                <span>Welcome <%= username %></span>
             </div>
             <div class="wrapper__top__logout">
                 <form action="/logout" method="POST">
@@ -45,32 +27,21 @@ justify-content: space-around;
                 </form>
             </div>
         </div>
->>>>>>> d837fa6 (Fixed user roles for teachers and students)
-            <div class="wrapper__instructions">
-                <span class="wrapper__instructions__heading">Overview</span>
-                <p class="wrapper__instructions__content">You can upload lessons in video format for students:<br><br>
-                     1. Clicking the upload video button<br><br>
-                     2. Select the video you want to upload<br><br>
-                     3. Click the submit button</p>
-            </div>
+
             <div class="wrapper__main">
-            <form id="dashboard-form">
+            <form id="dashboard-form"  action="/videos/all" method="POST" enctype="multipart/form-data">
                 <label class="video-uploader" for="file"><i class="fa fa-upload"></i> Upload Video</label>
-            <input id="file" type="file" name="file" accept="video/*">
+            <input id="file" type="file" name="new_video" accept="video/mp4">
             <input class="wrapper__submit-btn" type="submit">
             </form>
+            <div class="errors">
+                <p class=" errors__error errors__large">File too large</p>
+                <p class="errors__error errors__small">File too small</p>
+            </div>
             <div class="preview">
-                <p class="preview__content">Working</p>
+                <p class="preview__content">No lesson is in staging area</p>
             </div>
         </div>
-            <span class="wrapper__notice">The dashboard will soon be updated so that you can have more control.</span>
-            <div class="updates">
-             <span> Updates to be made:<br>
-               <span class="updates__content"> 1. Allow you to choose a specified form to upload video</span><br>
-               <span class="updates__content"> 2. Allow you to upload files for specified form</span><br>
-             </span>
-            </div>  
-            </span>
         </div>
     </main>
     <%- include ("footer") %>
@@ -84,24 +55,35 @@ justify-content: space-around;
   </script>
 <script>
     const previewContent = document.querySelector('.preview__content');
+    const errors = document.querySelectorAll(".errors__error")
     const file = document.getElementById("file");
     file.onchange = ()=>{
-        const fileContent = file.files[0]
-previewContent.textContent = "Your video is ready to be submitted";
-    }
+const fileContent = file.files[0]
+
+if (fileContent.size > 500000) {
+    previewContent.textContent = "No lesson is in staging area";
+    return errors[0].style.opacity = 1;
+}
+errors[0].style.opacity = 0;
+previewContent.textContent = "Your lesson has been staged";
+
+}
     const form = document.getElementById('dashboard-form');
-    form.onsubmit = e=>{
-        const fileContent = file.files[0]
-        if(fileContent === undefined){
-            previewContent.textContent = "No video is ready";
-        }else{
-         previewContent.textContent = "File is being uploaded..."
-         setTimeout(()=>previewContent.textContent = "File has been uploaded !",5000
-)
-         
-        }
+    form.onsubmit = e => {
+    const fileContent = file.files[0];
+
+    if(fileContent === undefined) return e.preventDefault();
+    
+
+    if (fileContent.size > 100000){
         e.preventDefault();
+        previewContent.textContent = "No lesson is in staging area";
+        return errors[0].style.opacity = 1;
+    } 
+
     }
+
+
 </script>
 </body>
 </html>

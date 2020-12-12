@@ -12,10 +12,20 @@
     html{
         font-family: 'Lato',sans-serif;
     }
-    h2{
-        margin:15rem;
-        text-align: center;
-        font-size:2rem;
+    .container{
+        margin-top:15rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    video{
+        display: block;
+        height: 15rem;
+        width: 20rem;
+        outline: none;
+        border: none;
+        margin:1rem;
     }
 </style>
 </head>
@@ -23,7 +33,7 @@
     <%- include("header") %>
 <main>
     <div class="container">
-        <h2 class="heading">No videos available right now</h1>
+        <h2></h2>
     </div>
 </main>
 <%- include("footer") %>
@@ -33,6 +43,36 @@
                 mainLink.classList.remove("active");
                 mainLink.classList.add("inactive");
           })
+</script>
+<script>
+     async function getAllVideos () {
+           const videosReq = await fetch("/videos/all");
+           const videosRes = await videosReq.json();
+          
+           try{
+           if (videosRes.length === 0) return document.querySelector("h2").textContent = "No videos available";
+
+            videosRes.forEach(video => {
+                const videoDOM = document.createElement("video");
+                const source = document.createElement("source");
+                videoDOM.setAttribute("controls","");
+                source.src = video.path;
+                source.type = "video/mp4"
+                videoDOM.append(source);
+                document.querySelector(".container").append(videoDOM)
+                console.log(videoDOM)
+            })
+        }
+        catch (err){
+            console.log(err);
+            document.querySelector("h2").textContent = "No videos available"
+        }
+    }
+    getAllVideos()
+
+
+
+
 </script>
 </body>
 </html>
