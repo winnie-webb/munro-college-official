@@ -1,14 +1,13 @@
-function sendVideo(mongoose) {
-const Video = new mongoose.model("Videos",{
+const mongoose = require("mongoose");
+const Videos = new mongoose.model("Videos",{
     filename : String,
     path : String,
     size : {
         type: Number,
         validate(value){
-            if(value > 500000) throw new Error("File too large")
+            const valueInMB = value/1024/1024
+            if(valueInMB > 500) throw new Error("File too large")
         }
     }
 });
-return Video;
-};
-module.exports = sendVideo;
+module.exports = Videos;

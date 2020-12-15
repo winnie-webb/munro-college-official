@@ -4,7 +4,7 @@ const express = require("express");
 const session = require("express-session");
 const formidable = require("formidable");
 const mongoose = require("mongoose");
-const Videos = require("./src/models/Videos")(mongoose);
+const Videos = require("./src/models/Videos");
 require("dotenv").config();
 require("./src/models/mongoose")(mongoose);
 const app = express();

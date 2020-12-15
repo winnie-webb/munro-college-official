@@ -36,7 +36,6 @@
             </form>
             <div class="errors">
                 <p class=" errors__error errors__large">File too large</p>
-                <p class="errors__error errors__small">File too small</p>
             </div>
             <div class="preview">
                 <p class="preview__content">No lesson is in staging area</p>
@@ -55,16 +54,16 @@
   </script>
 <script>
     const previewContent = document.querySelector('.preview__content');
-    const errors = document.querySelectorAll(".errors__error")
+    const error = document.querySelector(".errors__large")
     const file = document.getElementById("file");
     file.onchange = ()=>{
 const fileContent = file.files[0]
-
-if (fileContent.size > 500000) {
+const fileContentSizeInMB = file.files[0].size/1024/1024
+if (fileContentSizeInMB > 500) {
     previewContent.textContent = "No lesson is in staging area";
-    return errors[0].style.opacity = 1;
+    return error.style.opacity = 1;
 }
-errors[0].style.opacity = 0;
+error.style.opacity = 0;
 previewContent.textContent = "Your lesson has been staged";
 
 }
@@ -75,10 +74,10 @@ previewContent.textContent = "Your lesson has been staged";
     if(fileContent === undefined) return e.preventDefault();
     
 
-    if (fileContent.size > 100000){
+    if (fileContent.size > 1000000){
         e.preventDefault();
         previewContent.textContent = "No lesson is in staging area";
-        return errors[0].style.opacity = 1;
+        return error[0].style.opacity = 1;
     } 
 
     }

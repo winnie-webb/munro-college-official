@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/videos.css">
+    <script defer src="../js/navbar.js"></script>
 <style>
     html{
         font-family: 'Lato',sans-serif;
@@ -50,6 +51,7 @@
            const videosRes = await videosReq.json();
           
            try{
+            
            if (videosRes.length === 0) return document.querySelector("h2").textContent = "No videos available";
 
             videosRes.forEach(video => {
@@ -60,11 +62,10 @@
                 source.type = "video/mp4"
                 videoDOM.append(source);
                 document.querySelector(".container").append(videoDOM)
-                console.log(videoDOM)
             })
         }
         catch (err){
-            console.log(err);
+            console.log(err)
             document.querySelector("h2").textContent = "No videos available"
         }
     }

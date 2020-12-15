@@ -10,7 +10,7 @@ function handlePostRequests(app,ensureAuthForTeacher,formidable,Videos) {
     
     app.post("/videos/all",ensureAuthForTeacher,(req,res) => {
         const form = new formidable.IncomingForm();
-        parseVideo(form,Videos,req)
+        parseVideo(form,Videos,req,res)
     })
     app.post("/login",(req,res) => {
         const{code,name} = req.body;
